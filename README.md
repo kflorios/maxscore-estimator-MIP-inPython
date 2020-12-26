@@ -22,6 +22,8 @@ The only piece of code the user has to edit is these two lines of code in milp_c
 
 Where I have hard coded the case with p=5.
 
+Feel free to edit these two lines, and faciliate any number of predictors p. Usually p=2,3,4,5,6,7,8,9,...
+
 Feedback for the Python code at cflorios@central.ntua.gr, cflorios@aueb.gr.
 
 In case you have trouble using the docplex interface, do not hesitate to contact me for support.
