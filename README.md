@@ -34,13 +34,13 @@ For completeness, I supply the Matlab manual here too.
 
 The expected result is
 
-764.9999999999998
+value = 764.9999999999998
 
-[   1.          170.98512586    3.65217391    0.84668192 -110.48970252]
+estimates = (1., 170.98512586, 3.65217391, 0.84668192, -110.48970252)
 
-128.43699999999808
+time = 128.43699999999808
 
-integer optimal solution
+quality = integer optimal solution
 
 
 Suggested publication:  
