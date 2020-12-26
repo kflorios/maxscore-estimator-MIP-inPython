@@ -32,6 +32,14 @@ This is a translation of my own Matlab code available in another repository of m
 
 For completeness, I supply the Matlab manual here too.
 
+The expected result is
+
+764.9999999999998
+[   1.          170.98512586    3.65217391    0.84668192 -110.48970252]
+128.43699999999808
+integer optimal solution
+
+
 Suggested publication:  
 
 Florios, K., Skouras, S. 
