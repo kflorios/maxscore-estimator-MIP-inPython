@@ -22,7 +22,7 @@ The only piece of code the user has to edit is these two lines of code in milp_c
 
 Where I have hard coded the case with p=5.
 
-Feel free to edit these two lines, and faciliate any number of predictors p. Usually p=2,3,4,5,6,7,8,9,...
+Feel free to edit these two lines, and facilitate any number of predictors p. Usually p is a small integer (2 to say 10).
 
 Feedback for the Python code at cflorios@central.ntua.gr, cflorios@aueb.gr.
 
