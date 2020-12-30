@@ -23,10 +23,13 @@ def MaxScoreCompute():
 def readXyw():
     #Reads X,y,w of given max score problem
     X=np.loadtxt("X_Horowitz.txt")
+    #X = np.loadtxt("X_numeric200.txt")
     X=X[:,1:]
     y=np.loadtxt("y_Horowitz.txt")
+    #y = np.loadtxt("y_numeric200.txt")
     y=y[:,1:]
     w=np.loadtxt("w_Horowitz.txt")
+    #w = np.loadtxt("w_numeric200.txt")
     w=w[:,1:]
     return X,y,w
 
@@ -57,7 +60,9 @@ def definecAb(X,y,w):
     M=np.zeros(n)
     for i in range(n):
         #M[i]=np.abs(X[i,0])+np.abs(X[i,1:]@np.transpose(np.tile(d,(1,p-1))))
-        M[i] = np.abs(X[i, 0]) + np.abs(X[i, 1])* d + np.abs(X[i, 2])* d +np.abs(X[i, 3])* d +np.abs(X[i, 4])* d
+        #M[i] = np.abs(X[i, 0]) + np.abs(X[i, 1])* d + np.abs(X[i, 2])* d +np.abs(X[i, 3])* d +np.abs(X[i, 4])* d
+        #M[i] = np.abs(X[i, 0]) + np.sum(np.abs(X[i,j])*d for j in range(1,p))
+        M[i] = np.abs(X[i, 0]) + sum(np.abs(X[i, j]) * d for j in range(1, p))
     Abin=np.diag(M)
     Areal=np.zeros((n,p))
     for i in range(n):
@@ -132,9 +137,11 @@ def milp_cplex(c,A,b,Aeq,beq,lb,ub,n,p, X,y,best):
             XX[i,j]=(1-2*y[i])*X[i,j]
 
     for i in R1:
-        model.add_constraint((XX[i,0]*beta[0]+XX[i,1]*beta[1]+
-                                  XX[i,2]*beta[2]+XX[i,3]*beta[3]+
-                                  XX[i,4]*beta[4]) + M[i]*z[i]  <= M[i] )
+        #model.add_constraint((XX[i,0]*beta[0]+XX[i,1]*beta[1]+
+        #                          XX[i,2]*beta[2]+XX[i,3]*beta[3]+
+        #                          XX[i,4]*beta[4]) + M[i]*z[i]  <= M[i] )
+        model.add_constraint(M[i]*z[i]+model.sum(XX[i,j]*beta[j] for j in R2) <= M[i] )
+
 
     #this doesn't work
     #for i in R1:
@@ -159,7 +166,8 @@ def milp_cplex(c,A,b,Aeq,beq,lb,ub,n,p, X,y,best):
     model.export_as_lp("model.lp")
     ok=model.solve()
     print(ok)
-    x=ok.get_value_list([beta[0],beta[1],beta[2],beta[3],beta[4]])
+    #x=ok.get_value_list([beta[0],beta[1],beta[2],beta[3],beta[4]])
+    x = ok.get_value_list(list(beta[j] for j in range(p)))
     score=ok.objective_value
     feasible=ok.solve_details.status
     time=ok.solve_details.time

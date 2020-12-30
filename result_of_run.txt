@@ -1,5 +1,6 @@
-(cplex) C:\Storage\Kostas\Research\PythonCplex\PythonCplex_MWS>python main.py
-main.py:38: RuntimeWarning: invalid value encountered in true_divide
+
+(cplex) C:\Storage\Kostas\Research\PythonCplex\PythonCplex_MWS_v2>python main.py
+main.py:41: RuntimeWarning: invalid value encountered in true_divide
   testX = (X - np.tile(mu,(np.size(X,0),1))) / np.tile(sigma,(np.size(X,0),1))
 Model: maxscore
  - number of variables: 847
@@ -13,17 +14,16 @@ solution for: maxscore
 objective: 765
 x1=1
 x2=1
-x3=0
 x4=1
 x5=1
 x6=1
 x7=1
 x8=1
 x9=1
+x10=0
 x11=1
 x12=1
 x13=1
-x14=0
 x15=1
 x16=1
 x18=1
@@ -45,7 +45,6 @@ x37=1
 x38=1
 x39=1
 x40=1
-x41=0
 x43=1
 x44=1
 x45=1
@@ -79,9 +78,11 @@ x78=1
 x79=1
 x80=1
 x81=1
+x82=0
 x83=1
 x84=1
 x85=1
+x86=0
 x87=1
 x88=1
 x89=1
@@ -92,11 +93,13 @@ x93=1
 x94=1
 x95=1
 x97=1
+x98=0
 x99=1
 x100=1
 x101=1
 x102=1
 x103=1
+x104=0
 x105=1
 x106=1
 x107=1
@@ -124,6 +127,7 @@ x133=1
 x134=1
 x135=1
 x136=1
+x137=0
 x138=1
 x139=1
 x140=1
@@ -132,7 +136,6 @@ x142=1
 x143=1
 x144=1
 x145=1
-x146=0
 x148=1
 x149=1
 x150=1
@@ -171,6 +174,7 @@ x184=1
 x185=1
 x186=1
 x187=1
+x188=0
 x189=1
 x190=1
 x191=1
@@ -182,7 +186,6 @@ x196=1
 x198=1
 x199=1
 x200=1
-x201=0
 x202=1
 x203=1
 x204=1
@@ -194,7 +197,6 @@ x209=1
 x210=1
 x211=1
 x212=1
-x213=0
 x214=1
 x216=1
 x218=1
@@ -206,7 +208,6 @@ x224=1
 x225=1
 x226=1
 x227=1
-x228=0
 x229=1
 x231=1
 x232=1
@@ -223,7 +224,6 @@ x243=0
 x245=1
 x247=1
 x248=1
-x249=0
 x250=1
 x251=1
 x252=1
@@ -388,6 +388,7 @@ x417=1
 x418=1
 x419=1
 x420=1
+x421=0
 x422=1
 x423=1
 x424=1
@@ -397,7 +398,6 @@ x427=1
 x428=1
 x429=1
 x430=1
-x431=0
 x432=1
 x433=1
 x434=1
@@ -410,8 +410,6 @@ x440=1
 x441=1
 x442=1
 x443=1
-x444=0
-x445=0
 x446=1
 x447=1
 x448=1
@@ -582,8 +580,8 @@ x620=1
 x621=1
 x622=1
 x623=1
-x624=0
 x625=1
+x626=0
 x627=1
 x628=1
 x629=1
@@ -627,14 +625,12 @@ x669=1
 x670=1
 x671=1
 x672=1
-x673=0
 x674=1
 x675=1
 x676=1
 x678=1
 x679=1
 x680=1
-x681=0
 x682=1
 x683=1
 x684=1
@@ -801,8 +797,9 @@ x845=0.968
 x846=0.401
 x847=5.131
 
-764.9999999999998
+765.0
 [   1.          170.98512586    3.65217391    0.84668192 -110.48970252]
-128.43699999999808
+143.0
 integer optimal solution
 
+(cplex) C:\Storage\Kostas\Research\PythonCplex\PythonCplex_MWS_v2>
