@@ -24,8 +24,11 @@ For completeness, I supply the Matlab manual here too.
 The expected result is
 
 value = 765.0
+
 estimates = (1., 170.98512586, 3.65217391, 0.84668192, -110.48970252)
+
 time = 143.0
+
 quality = integer optimal solution
 
 
