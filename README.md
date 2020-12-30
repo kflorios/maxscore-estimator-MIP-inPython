@@ -11,18 +11,7 @@ Currently, also weights w are supported for an extension called 'maximum weighte
 In order to have a more flexible modeling approach, readers are suggested to consult the GAMS version
 of the same model in https://www.gams.com/modlib/libhtml/mws.htm.
 
-The code is semi-generic. It supports arbitrary values for sample size, N, and number of predictors, p.
-
-The only piece of code the user has to edit is these two lines of code in milp_cplex function:
-
-    for i in R1:
-        model.add_constraint((XX[i,0]*beta[0]+XX[i,1]*beta[1]+
-                                  XX[i,2]*beta[2]+XX[i,3]*beta[3]+
-                                  XX[i,4]*beta[4]) + M[i]*z[i]  <= M[i] )
-
-Where I have hard coded the case with p=5.
-
-Feel free to edit these two lines, and facilitate any number of predictors p. Usually p is a small integer (2 to say 10).
+The code is generic. It supports any reasonable value for sample size, N, and number of predictors, p.
 
 Feedback for the Python code at cflorios@central.ntua.gr, cflorios@aueb.gr.
 
@@ -34,12 +23,9 @@ For completeness, I supply the Matlab manual here too.
 
 The expected result is
 
-value = 764.9999999999998
-
+value = 765.0
 estimates = (1., 170.98512586, 3.65217391, 0.84668192, -110.48970252)
-
-time = 128.43699999999808
-
+time = 143.0
 quality = integer optimal solution
 
 
