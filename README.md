@@ -39,3 +39,8 @@ Exact computation of max weighted score estimators
 (2008) Journal of Econometrics, 146 (1), pp. 86-91.
 
 http://www.sciencedirect.com/science/article/pii/S0304407608000778 
+
+The research project was supported by the Hellenic Foundation 
+for Research and Innovation (H.F.R.I.) under the “2nd Call for 
+H.F.R.I. Research Projects to support Post-Doctoral Researchers”
+(Project Number: 902).
